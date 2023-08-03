@@ -126,7 +126,8 @@ linkedList.insertFirst("Huh");
 /*Find the midpoint node of the linked list.
 If the linked list have an even number of the elements,return the node at the  end of the first half 
 of the list.*/
-/*Rule:Don't use the counter variable. */
+/*Rule:Don't use the counter variable.Don't use the size of the linked list.Only iterate through the 
+list one time */
 /*======Finding midpoint of the linked list========*/
 function getMidpoint(linkedList){
     let slow=linkedList.getFirst();
