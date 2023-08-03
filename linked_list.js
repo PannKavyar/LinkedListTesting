@@ -21,6 +21,7 @@ class LinkedList{
         
         this.head=new Node(data,this.head);
     }
+
     size(){
         let count=0;
         let node=this.head;
@@ -102,7 +103,7 @@ class LinkedList{
     }
     /*Creating Circular LinkedList*/
     createCircular(index){
-         let lastNode=linkedList.getLast();
+         let lastNode=this.getLast();
          if(lastNode){
              lastNode.next=this.getAt(index);
              return lastNode;
@@ -122,7 +123,10 @@ linkedList.insertFirst("Hi");
 linkedList.insertFirst("Ok");
 linkedList.insertFirst("Huh");
 
-
+/*Find the midpoint node of the linked list.
+If the linked list have an even number of the elements,return the node at the  end of the first half 
+of the list.*/
+/*Rule:Don't use the counter variable. */
 /*======Finding midpoint of the linked list========*/
 function getMidpoint(linkedList){
     let slow=linkedList.getFirst();
@@ -135,7 +139,7 @@ function getMidpoint(linkedList){
 }
 
 
-/*Checking the LinkedList is circular or not*/
+/*Check whether linked list is ciecular? If circular return 'true', if not return 'false'.*/
 function checkCircular(linkedList){
 let slow=linkedList.getFirst();
 let fast=linkedList.getFirst();
@@ -145,8 +149,10 @@ while(fast.next && fast.next.next){
     if(slow === fast){
         return true;
     }
+    
 }
 return false;
+
 }
 
 /*return the node which is n space from the last node*/
@@ -172,12 +178,12 @@ function fromLastNode(linkedList,n){
 // console.log("Remove Last",linkedList.removeLast());
 // console.log("Insert Last data is",linkedList.insertLast("Yes"));
 // console.log("Get Insert Last Data is",linkedList.getLast());
-// linkedList.createCircular(1);
+//  linkedList.createCircular(1);
 // console.log("=============================================");
 // console.log("Get midpoint data is" , getMidpoint(linkedList));
 // console.log("=============================================");
 // console.log("Checking the LinledList is Circular" ,checkCircular(linkedList));
-// console.log("==============================================");
-// console.log("The node which is 3 space from the last node is", fromLastNode(linkedList,3));
-console.log(linkedList.clear());
-console.log(linkedList);
+console.log("==============================================");
+console.log("The node which is 3 space from the last node is", fromLastNode(linkedList,3));
+// console.log(linkedList.clear());
+// console.log(linkedList);
