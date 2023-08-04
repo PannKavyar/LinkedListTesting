@@ -156,6 +156,11 @@ return false;
 
 }
 
+/* 
+ * fromLastNode(linkedlist,2)
+ *Given a linkedList and integer n, return the node which is the spaces from the last node.
+ *Rule: Do not call the size of the linkedList.Assume that n always less than the size of the linkedList.
+ */ 
 /*return the node which is n space from the last node*/
 function fromLastNode(linkedList,n){
     let slow=linkedList.getFirst();
